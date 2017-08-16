@@ -6,6 +6,8 @@
 	<title></title>
 </head>
 <body>
+  <div class="container">
+  <!-- Замечания как на странице sedona-index.html -->
 	<header class="main-header">
 		<nav class="main-navigation">
 			<a class="main-header-logo" href="index.html">
@@ -22,104 +24,146 @@
 	<main class="container">
 		<h1 class="visually-hidden">Каталог жилья</h1>
 		<section class="filters">
+      <!-- Нужен заголовок -->
 			<form class="filter" method="get" action="https://echo.htmlacademy.ru">
 				<fieldset>
 					<legend>Инфраструктура:</legend>
-					<ul>
-						<li class="filter-option"><input class="filter-input filter-input-checkbox" type="checkbox" name="bathroom" checked>Бассейн</li>
-						<li class="filter-option"><input class="filter-input filter-input-checkbox" type="checkbox" name="parking">Парковка</li>
-						<li class="filter-option"><input class="filter-input filter-input-checkbox" type="checkbox" name="wi-fi">Wi-fi</li>
+					<ul class="infrastr"><!-- добавь класс -->
+						<li class="filter-option">
+              <!-- Кликабельным должен быть весь текст, а не только иконка. Чтобы добиться такого результата есть 2 способа:
+                1) <input type="checkbox" id="checkbox-1">
+                   <label for="checkbox-1">Бассейн</label>
+                2) <label>
+                    <input type="checkbox">
+                    Бассейн
+                   </label>
+              -->
+                        <input class="filter-input filter-input-checkbox" type="checkbox" id="infrastr-1" checked><label for="infrastr-1" >Бассейн</label>	
+           				</li>
+						<li class="filter-option">
+							<input class="filter-input filter-input-checkbox" type="checkbox" id="infrastr-2" name="parking">
+						<label for="infrastr-2">Парковка</label>
+						</li>
+						<li class="filter-option">
+						<input class="filter-input filter-input-checkbox" type="checkbox" id="infrastr-3" name="wi-fi"><label for="infrastr-3">Wi-fi</label>
+						</li>
 					</ul>
 				</fieldset>
 				<fieldset>
 					<legend>Тип жилья:</legend>
-					<ul>
-						<li class="filter-option"> <input class="filter-input filter-input-checkbox" type="checkbox" name="hotel" checked>Гостиница</li>
-						<li class="filter-option"> <input class="filter-input filter-input-checkbox" type="checkbox" name="motel" checked>Мотель</li>
-						<li class="filter-option"> <input class="filter-input filter-input-checkbox" type="checkbox" name="apartments" checked>Апартаменты</li>
+					<ul class="leaving"><!-- Добавь класс -->
+						<li class="filter-option"><input class="filter-input filter-input-checkbox" type="checkbox" id="leaving-1" name="hotel" checked><label for="leaving-1">Гостиница</label></li>
+						<li class="filter-option"><input class="filter-input filter-input-checkbox" type="checkbox" id="leaving-2" name="motel" checked><label for="leaving-2">Мотель</label></li>
+						<li class="filter-option"><input class="filter-input filter-input-checkbox" type="checkbox" id="leaving-3" name="apartments" checked><label for="leaving-3">Апартаменты</label></li>
 					</ul>
 				</fieldset>
-				<!-- движок-->
+        <!-- Делаем простую базовую разметку, потом добавим элементов -->
+        		<fieldset>
+          			<legend>Стоимость в сутки (Р):</legend>
+          			<section class="price-range">
+            <!--Какие-то теги -->
+          			</section>
+          			<button type="submit" class="">Показать</button>
+                </fieldset> 
 			</form>
 		</section>
 
 		<section class="sort">
-			<span class="sort-find">Найдено: 3</span>
-			<form class="sortfilter" method="get" action="https://echo.htmlacademy.ru">
-				<fieldset>
-					<legend>Сортировка:</legend>
-					<ul>
-						<li class="sort-option"> <input class="sort-input sort-input-radio" type="radio" name="sort-group" value="pirce">По цене</li>
-						<li class="sort-option"> <input class="sort-input sort-input-radio" type="radio" name="sort-group" value="type">По типу</li>
-						<li class="sort-option"> <input class="sort-input sort-input-radio" type="radio" name="sort-group" value="rating">По рейтингу</li>
-					</ul>
-				</fieldset>
-
-				<fieldset>
-					<ul>
-						<li class="sort-up"><input class="sort-input sort-input-up-down" type="radio" name="up-down" value="up"><!--стрелочка вверх--></li>
-						<li class="sort-up"><input class="sort-input sort-input-up-down" type="radio" name="up-down" value="down"><!--стрелочка вниз--></li>
-					</ul>
-				</fieldset>
-			</form>
+			<p class="sort-find">Найдено: <span class="amount">3</span>Сортировка</p>
+			<!-- Тег <p>, цифру "3" - оберни в span - чтобы можно было ее менять, не меняя всего текста -->
+      <!-- Далее ижет не форма, а набор ссылок для упорядочивания элементов, который у нас есть после поиска по фильтрам -->
+      <!-- 2 блока с сортировкой по типам и сортировкой по направлению -->
+      		<ul class="sort-list">
+      			<li><a class="sort-item price" href="#">По цене</a></li>
+      			<li><a class="sort-item" href="#">По типу</a>
+      			</li>
+      			<li><a class="sort-item" href="#">По рейтингу</a></li>
+      		</ul>
+			<ul class="sort-up-down">
+				<li class="sort-up"><a href="#"><!--стрелочка вверх--></a></li>
+				<li class="sort-down"><a href="#"><!--стрелочка вниз--></a></li>
+			</ul>
 		</section>
 
-		<section class="hotels">
-			<ul class="catalog-hotels">
-				<li class="Amara">
-					<ul>
-						<li><a class="hotel"><img src="img/amara.jpg" width="" height="" alt="amara"></a></li>
-						<li class="catalog-item"> 
-						<h2>Amara resort & spa</h2>
-						<p>Гостиница от 4000 р.</p>
-						<a class="button-detail" href="https://echo.htmlacademy.ru">
+		
+      <!-- Рекомендую делать не списком, а тегами <article>. Карточка отеля является самодостаточным блоком, который можно вырвать с этого сайта и разместить на другом сайте и он ен потеряет смысла -->
+			
+		<article class="Amara"><!-- Считаем что это <article> -->
+			<a class="hotel"><img src="img/amara.jpg" width="" height="" alt="Amara resort & spa"></a><!-- li - не нужен, только ссылка с правильным классом, в котором должно фигурировать слово img, допустим hotel-img -->
+			<div class="hotel-info"><!-- Этот блок замени на <div> - с нужным классом, например hotel-info -->
+				<h2 class="hotel-name">Amara resort & spa</h2><!-- Добавь класс -->
+				<p><span class="hotel-type"> Гостиница</span> от <span class="hotel-price">4000</span>р.</p><!-- Внутри этого блока должно быть два тега <span> - с классами. Первый имеет класс, который будет обозначать тип отеля, второй цену -->	
+            <!-- Нужен общий блок с кнопками, в котором будут идти 2 кнопки-ссылки -->
+            </div>
+            <div>
+			 	<a class="button-detail" href="https://echo.htmlacademy.ru">
 						Подробнее</a>
-						<a class="button-book" href="https://echo.htmlacademy.ru">
-						Забронировать</a></li>
-						<li><!-- Рейтинг --></li>
-					</ul>
-				</li>
-				<li class="Desert">
-					<ul>
-						<li><a class="hotel"><img src="img/desert.jpg" width="" height="" alt="desert"></a></li>
-						<li class="catalog-item"> 
-						<h2>Desert quail inn</h2>
-						<p>Мотель от 3000 р.</p>
-						<a class="button-detail" href="https://echo.htmlacademy.ru">
-						Подробнее</a>
-						<a class="button-book" href="https://echo.htmlacademy.ru">
-						Забронировать</a></li>
-						<li><!-- Рейтинг --></li>
-					</ul>
-				</li>
-				<li class="villas">
-					<ul>
-						<li><a class="hotel"><img src="img/villas.jpg" width="" height="" alt="villas"></a></li>
-						<li class="catalog-item"> 
-						<h2>Villas at poco diablo</h2>
-						<p>Апартаменты от 2000 р.</p>
-						<a class="button-detail" href="https://echo.htmlacademy.ru">
-						Подробнее</a>
-						<a class="button-book" href="https://echo.htmlacademy.ru">
-						Забронировать</a></li>
-						<li><!-- Рейтинг --></li>
-					</ul>
-				</li>
-		</section>
+				<a class="button-book" href="https://echo.htmlacademy.ru">
+						Забронировать</a>
+			</div>
+			</div>
+			<div class="hotel-quality">
+				<p class="hotel-star hotel-star-4">4 звезды</p>
+				<p class="hotel-rating"> Рейтинг:<span>8,5</span></p>
+			</div>
+		</article>		
+				<!-- Пример разметки
+              <div class="hotel-quality">
+                <p class="hotel-star hotel-star-4">4 звезды</p>
+                <p class="hotel-rating">
+                  Рейтинг: <span>8,5</span>
+                </p>
+              </div>
+            -->
+        <article class="Desert">
+			<a class="hotel"><img src="img/desert.jpg" width="" height="" alt="Desert quail inn"></a>
+			<div class="hotel-info">
+			<h2 class="hotel-name">Desert quail inn"</h2>
+			<p><span class="hotel-type">Мотель</span> от <span class="hotel-price">3000</span>р.</p>
+			</div>
+            <div>
+				<a class="button-detail" href="https://echo.htmlacademy.ru">
+				Подробнее</a>
+				<a class="button-book" href="https://echo.htmlacademy.ru">
+				Забронировать</a>
+			</div>
+			<div class="hotel-quality">
+				<p class="hotel-star hotel-star-3">3 звезды</p>
+				<p class="hotel-rating"> Рейтинг:<span>8,9</span></p>
+			</div>
+		</article>
+
+		<article class="Villas">
+			<a class="hotel"><img src="img/desert.jpg" width="" height="" alt="Villas at poco diabolo"></a>
+			<div class="hotel-info">
+			<h2 class="hotel-name">"Villas at poco diabolo"</h2>
+			<p><span class="hotel-type">Апартаменты</span> от <span class="hotel-price">2000</span>р.</p>
+			</div>
+            <div>
+				<a class="button-detail" href="https://echo.htmlacademy.ru">
+				Подробнее</a>
+				<a class="button-book" href="https://echo.htmlacademy.ru">
+				Забронировать</a>
+			</div>
+			<div class="hotel-quality">
+				<p class="hotel-star hotel-star-2">2 звезды</p>
+				<p class="hotel-rating"> Рейтинг:<span>9,2</span></p>
+			</div>
+		</article>				
 	</main>
 
-	<footer class="main-footer">
-		<p class="#">#visitsedona</p>
-		<div class="footer-social">
-			<ul>
+		<footer class="main-footer">
+			<p class="#">#visitsedona</p>
+		<!-- Лишний блок. Этот класс повесь на тег <ul> -->
+			<ul class="footer-social">
 				<li><a class="social-button" href="#">Твиттер</a></li>
 				<li><a class="social-button" href="#">Фейсбук</a></li>
 				<li><a class="social-button" href="#">Ютуб</a></li>
 			</ul>
-		</div>
-		<p class="footer-copyrite">Website by 
-		<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="logo-htmlacademy.svg" width="" height="" alt="логотип htmlacademy"></a>
-		</p>
-	</footer>
+			<p class="footer-copyrite">Website by
+			<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="logo-htmlacademy.svg" width="" height="" alt="логотип htmlacademy"></a>
+			</p>
+		</footer>
+	  </div>
 </body>
 </html>

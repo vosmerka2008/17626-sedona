@@ -1,79 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="sedona-style.css">
-	<title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="sedona-style.css">
+  <title></title>
 </head>
 <body>
-	<header class="main-header">
-		<nav class="main-navigation">
-			<a class="main-header-logo">
-				<img src="img/index-logo.svg" width="60" height="50" alt="Логотип сайта Седона">
-			</a>
-			<ul class="site-navigation">
-				<li><a href="info.html">Информация</a></li>
-				<li><a href="photo-video.html">Фото и видео</a></li>
-				<li><a href="map.html">Карта штата</a></li>
-				<li><a href="hotel.html">Гостиницы</a></li>
-			</ul>
-		</nav>
-	</header>
-	
-	<main class="container">
-		<h1 class="visually-hidden">Седона</h1>
-		<section class="white">
-			<img src="img/welcome-to-Sedona.psd" alt="Седона">
-			<!-- Высота и ширина? -->
-			<h2>Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>				
-			<p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-		</section>
-		
-		<section class="blue">
-			<h3>Настоящий городок</h3>
-			<p>- №1 -</p>
-			<p>Седона - не аттракцион для туристов, том течет своя жизнь</p>
-			<img src="img/reason-1.psd" alt="Настоящий городок">
-		</section>
-		
-		<section class="white">
-			<ul class="recom-list">
-				<li class="recom-item"><h3 class="recom-list-title">Жилье</h3>
-				<p>Рекомендуем пожить в настоящем мотеле, как в кино!</p>
-				</li>
-				<li class="recom-item"><h3 class="recom-list-title">Еда</h3>
-				<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
-				</li>
-				<li class="recom-item"><h3 class="recom-list-title">Сувениры</h3>
-				<p>Не только китайского, но и местного производства!</p>
-				</li>
-			</ul>
-		</section>
+  <!-- Если посмотреть на макет, то видно что весь контент обернут в некий блок http://prntscr.com/g85qes - это блок-центровщик. Его задача быть нужного размера (как на макете) и располагаться по центру, если вдруг ширина экрана больше его ширины. Карта должна масштабироваться на 100% ширины экрана - значит она не должна входить в центровщик, иначе она не сможет увеличиться больше размеров центровщика -->
+  <!-- Тут нужен общий блок, который будет все оборачиваться -->
+  <div class="container">
+	  <header class="main-header">
+	    <nav class="main-navigation">
+	      <a class="main-header-logo">
+	        <img src="img/index-logo.svg" width="60" height="50" alt="Логотип сайта Седона">
+	      </a>
+	      <ul class="site-navigation">
+	        <li><a href="info.html">Информация</a></li>
+	        <li><a href="photo-video.html">Фото и видео</a></li>
+	        <li><a href="map.html">Карта штата</a></li>
+	        <li><a href="hotel.html">Гостиницы</a></li>
+	      </ul>
+	    </nav>
+	  </header>
 
-		<section class="blue">
-			<img src="img/bridge.psd" alt="Мост дьявола">
-			<h3>Там есть мост дьявола</h3>
-			<p>- №2 -</p>
-			<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-		</section>
-	
-		<section class="grey">
-			<ul class="reason-list">
-				<li class="reason-3-4-5"><h3>Небольшая площадь</h3>
-				<p>-№3-</p>
-				<p>Все достопримечательности находятся очень близко</p>
-				</li>
-				<li class="reason-3-4-5"><h3>Красивая дорога</h3>
-				<p>-№4-</p>
-				<p>Ехать в Седону из Лас-вегаса совсем не скучно!</p>
-				</li>
-				<li class="reason-3-4-5"><h3>Мало туристов</h3>
-				<p>-№5-</p>
-				<p>Большинство едет в Гранд-Каньон и толпится там</p>
-				</li>
-			</ul>
-		</section>
+	  <main class="content">
+	    <section class="photo-about"><!-- Не подходящее название контейнера. Лучше .about или что-то такое -->
+	      <p class="about background-welcome">Welcome</p>
+	      <p class="about background-gorgeous">To the gorgeous</p>
+	      <h1 class="about background-title">Sedona</h1>
+	      <p class="about background-reason">"Because the Grand<br>Canyon sucks!"</p>
+	      <!-- Все что изображено на картинке, необходимо написать текстом и скрыть, как ты скрываешь заголовки. Мы вместо этого текста поставим картинку. http://prntscr.com/g85spi - это секция назовие ее .promo - допустим или .welcome. Белый фоновый цвет у блоков будет от их родителя общего блока обертки -->
+	      <p class="about description-title">Седона - небольшой городок в Аризоне, заслуживающий большего!</p><!-- Это не заголовок. У заголовка в конце не может быть знака припинания. Тегам лучше задавать классы, чтобы потом можно было их точечно стилизовать по классам. -->
+	      <p class="about description-reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+	    </section>
+	    <!-- Идущие далее блоки все похожы. У них есть заголовки - одинаковые (только цвет отличается), есть описание (тоже отличается цветом) и кого-то есть номер, а у кого-то иконки. Поэтому эти блоки необходимо делать с одинаковыми классами + каждому из них давать уникальный класс. Допустим у них у всех будет класс .features, но у синих будет дополнительно .features-blue, у белых .features-white, а серый http://prntscr.com/g85u4t - будет содержать класс, чтобы сделать его серым. -->
 
-	</main>
+	    <section class="features">
+		    <div class="features features-blue">
+		      <!-- Тут класс .features и .features-blue -->
+		      <!-- Заголовок, номер и описание надо обернуть в общий блок. Его название например будет .features-descr http://prntscr.com/g85vet -->
+		      <h2>Настоящий городок</h2>
+		      <span class="number number-blue">№1</span><!-- У номер не надо ставить тире, мы их сделаем через псевдоэлементы --><!-- Добавить класс таким тегам, которые дают номер -->
+		      <p>Седона - не аттракцион для туристов, том течет своя жизнь</p>
+		      <!-- Картинку тоже надо обернуть в общий блок -->
+		      <a class="features town-photo"><img src="img/reason-1.psd" width="" height="" alt="Настоящий городок"></a>
+		    </div>
+
+		    <div class="features features-white"><!-- .features -->
+		        <div class="features-item features-item-house"><!-- Это будут .features-item + .features-item-house -->
+		          <h3 class="features-item-title">Жилье</h3>
+		          <p>Рекомендуем пожить в настоящем мотеле, как в кино!</p>
+		        </div>
+		        <div class="features-item features-item-food"><!-- Это будут .features-item + .features-item-food -->
+		          <h3 class="features-item-title">Еда</h3>
+		          <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+		        </div>
+		        <div class="features-item features-item-souvenir"><!-- Это будут .features-item + .features-item-souvenir -->
+		          <h3 class="features-item-title">Сувениры</h3>
+		          <p>Не только китайского, но и местного производства!</p>
+		        </div>
+		    </div>
+
+		    <div class="features features-blue"><!-- Расположение такое же как и в первом примере -->
+		      <a class="features bridge-photo"><img src="img/bridge.psd" width="" height="" alt="Мост дьявола"></a>
+		      <h3>Там есть мост дьявола</h3>
+		      <span class="number number-blue">№2</span><!-- Добавить класс таким тегам, которые дают номер -->
+		      <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+		    </div>
+		    <div class="features features-gray"><!-- Разметка такая же как во втором блоке -->
+		        <div class="reason-item">
+		        	<h3>Небольшая площадь</h3>
+		        	<span class="number number-gray">№3</span><!-- Добавить класс таким тегам, которые дают номер -->
+		        	<p>Все достопримечательности находятся очень близко</p>
+		        </div>
+		        <div class="reason-item">
+		        	<h3>Красивая дорога</h3>
+		       		 <span class="number number-gray">№4</span>
+		        <!-- Добавить класс таким тегам, которые дают номер -->
+		        	<p>Ехать в Седону из Лас-вегаса совсем не скучно!</p>
+		        </div>
+		        <div class="reason-item">
+		        	<h3>Мало туристов</h3>
+		        	<span class="number number-gray">№5</span><!-- Добавить класс таким тегам, которые дают номер -->
+		        	<p>Большинство едет в Гранд-Каньон и толпится там</p>
+		        </div>
+		    </div>
+		 </section>
+		 <section class="interest">
+		 	<h2>Заинтересовались?</h2>
+		 	<p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
+		 </section>
+		 <section class="search">
+		 	<h3 class="search-title">Поиск гостиницы в седоне</h3>
+		 	<div class="map"></div>
+			<!-- Форма поиска -->
+		</section>
+	    <!-- Нет секции "Заинтересовались" -->
+	  </main>
+	  <!-- Тут центровщик закрывается, иначе из-за него карта не растянется -->
+  	   <!-- Идет блок с картой -->
+      <footer class="main-footer">
+		<p class="#">#visitsedona</p>
+		<!-- Лишний блок. Этот класс повесь на тег <ul> -->
+			<ul class="footer-social">
+				<li><a class="social-button" href="#">Твиттер</a></li>
+				<li><a class="social-button" href="#">Фейсбук</a></li>
+				<li><a class="social-button" href="#">Ютуб</a></li>
+			</ul>
+		</div>
+		<p class="footer-copyrite">Website by
+		<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="logo-htmlacademy.svg" width="" height="" alt="логотип htmlacademy"></a>
+		</p>
+	</footer>
+  </div>
+  <!--Увеличивающаяся карта-->
 </body>
 </html>
