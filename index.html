@@ -3,15 +3,14 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="sedona-style.css">
-  <title></title>
+  <title>Седона</title>
 </head>
 <body>
   <div class="container">
 	  <header class="main-header">
-	    <a class="main-header-logo"><!-- Ссылку с логотипом выносим из тега <nav> -->
-	        <img src="img/index-logo.svg" width="60" height="50" alt="Логотип сайта Седона">
-	      </a>
-      <!-- Тут будет логотип -->
+	    <a class="main-header-logo">
+        <img src="img/index-logo.svg" width="60" height="50" alt="Логотип сайта Седона">
+        </a>
 	    <nav class="main-navigation">
 	      <ul class="site-navigation">
 	        <li><a href="info.html">Информация</a></li>
@@ -24,99 +23,100 @@
 
 	  <main class="content">
 	    <section class="photo-about">
-	      <p class="about background-welcome">Welcome</p>
-	      <p class="about background-gorgeous">To the gorgeous</p>
-	      <h1 class="about background-title">Sedona</h1>
-	      <p class="about background-reason">"Because the Grand<br>Canyon sucks!"</p>
+	      <p class="visually-hidden">Welcome</p>
+	      <p class="visually-hidden">To the gorgeous</p>
+	      <h1 class="visually-hidden">Sedona</h1>
+	      <p class="visually-hidden">"Because the Grand<br>Canyon sucks!"</p>
 	    </section>
-      <!--
-        Какая-то такая разметка этого блока. Я его вынес из предыдущего блока-->
-        <section class="promo">
-          <h2 class="visually-hiddon">description</h2>
-          <p class="promo-description-title">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
-          <p class="promo-description-reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
-        </section>
-      -->
-	    <section class="features">
-	    	<h2 class="visually-hiddon">Наши преимущества</h2>
-        <!-- Ставим заголовок <h2 class="">Наши преимущества</h2> - его надо будет скрыть -->
-		    <section class="features-item features-item-blue"><!-- Это делаем section. Заменил features на features-item -->
-            	<div class="features-item-info"><!-- Добавил обертку -->
-           			<h3 class="features-item-title">Настоящий городок</h3><!-- Добавил класс. Заменил на h3 -->
-            		<span class="features-item-number">№1</span><!-- Заменил класс number - на features-item-number. Так как класс number - очень общий класс, а нам надо стилизовать будет конкретно эти номера -->
-            		<p class="features-item-descr">Седона - не аттракцион для туристов, том течет своя жизнь</p><!-- Добавил класс -->
-          		</div>
-		        <div class="features-item-photo"><img src="img/reason-1.psd" width="" height="" alt="Настоящий городок">
-		        </div><!-- Думаю ссылка тут не подходит. Эта картинка никуда нас не ведет. Поэтому лучше <div>. features town-photo - эти 2 класса заменил на .features-item-photo -->
-		    </section>
 
-	        <section class="features-item features-item-house"><!-- надо заменить на section -->
-	            <h3 class="features-item-title">Жилье</h3>
-	            <p class="features-item-descr">Рекомендуем пожить в настоящем мотеле, как в кино!</p><!-- Добавляем класс .features-item-descr -->
-	        </stction>
-	        <section class="features-item features-item-food"><!-- надо заменить на section -->
-	            <h3 class="features-item-title">Еда</h3>
-	            <p class="features-item-descr">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p><!-- Добавляем класс .features-item-descr -->
+      <section class="promo">
+        <h2 class="visually-hidden">Описание Седоны</h2><!-- Тут надо написать заголовок этой секции -->
+        <p class="promo-description-title">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+        <p class="promo-description-reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+      </section>
+
+	    <section class="features">
+		    <h2 class="visually-hiddon">Наши преимущества</h2>
+
+			<section class="features-item features-item-blue">
+	        <div class="features-item-info">
+	       		<h3 class="features-item-title">Настоящий городок</h3>
+	        	<span class="features-item-number">№1</span>
+	        	<p class="features-item-descr">Седона - не аттракцион для туристов, том течет своя жизнь</p>
+	      		</div>
+			    <div class="features-item-photo">
+	            <img src="img/reason-1.psd" width="" height="" alt="Настоящий городок">
+			    </div>
+			</section>
+
+	        <section class="features-item features-item-house">
+	          <h3 class="features-item-title">Жилье</h3>
+	          <p class="features-item-descr">Рекомендуем пожить в настоящем мотеле, как в кино!</p>
 	        </section>
-	        <section class="features-item features-item-souvenir"><!-- надо заменить на section -->
-	            <h3 class="features-item-title">Сувениры</h3>
-	            <p class="features-item-descr">Не только китайского, но и местного производства!</p><!-- Добавляем класс .features-item-descr -->
+
+	        <section class="features-item features-item-food">
+	          <h3 class="features-item-title">Еда</h3>
+	          <p class="features-item-descr">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
 	        </section>
-		    
-            <section class="features-item features-item-blue"><!-- Этот блок надо сделать по примеру первого блока с features -->
-		        <div class="features-item-photo"><img src="img/bridge.psd" width="" height="" alt="Мост дьявола"></div>
+
+	        <section class="features-item features-item-souvenir">
+	          <h3 class="features-item-title">Сувениры</h3>
+	          <p class="features-item-descr">Не только китайского, но и местного производства!</p>
+	        </section>
+
+	        <section class="features-item features-item-blue">
+		        <div class="features-item-photo">
+	            <img src="img/bridge.psd" width="" height="" alt="Мост дьявола">
+	            </div>
 		        <div class="features-item-info">
-		        <h3 class="features-item-title">Там есть мост дьявола</h3>
-		        <span class="features-item-number">№2</span>
-		        <p class="features-item-descr">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+	  	        <h3 class="features-item-title">Там есть мост дьявола</h3>
+	  	        <span class="features-item-number">№2</span>
+	  	        <p class="features-item-descr">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
 		        </div>
-		    </section>    
-		    
-		    <section class="features-item-square"><!-- Меняем класс; делаем section -->
-		        <h3 class="features-item-title">Небольшая площадь</h3><!-- Добавляем класс -->
-		        <span class="fityres-item-number">№3</span><!-- Добавить класс таким тегам, которые дают номер -->
-		        <p class="features-item-descr">Все достопримечательности находятся очень близко</p><!-- Добавляем класс -->
-		    </section>
-		    <section class="features-item-road"><!-- Эти блоки сделать по примеру первого блока http://prntscr.com/g9h7nb -->
+		      </section>
+
+		      <section class="features-item features-item-gray"><!-- Пока оставляем только общий класс features-item -->
+		        <h3 class="features-item-title">Небольшая площадь</h3>
+		        <span class="fityres-item-number">№3</span>
+		        <p class="features-item-descr">Все достопримечательности находятся очень близко</p>
+		      </section>
+
+			    <section class="features-item features-item-gray"><!-- Пока оставляем только общий класс features-item -->
 		        <h3 class="features-item-title">Красивая дорога</h3>
 		       	<span class="features-item-number">№4</span>
 		        <p class="features-item-descr">Ехать в Седону из Лас-вегаса совсем не скучно!</p>
-		    </section>
-		    <section class="features-item-tourists"><!-- Эти блоки сделать по примеру первого блока http://prntscr.com/g9h7nb -->
+			    </section>
+
+			    <section class="features-item features-item-gray"><!-- Пока оставляем только общий класс features-item -->
 		        <h3 class="features-item-title">Мало туристов</h3>
 		        <span class="features-item-number">№5</span>
 		        <p class="features-item-descr">Большинство едет в Гранд-Каньон и толпится там</p>
+			    </section>
 		    </section>
-		</section>
 
-		<section class="interest">
-		 	<h2>Заинтересовались?</h2>
-		 	<p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
-		    <section class="search"><!-- Этот блок надо вставить в раздел interest -->
-		 	<h3 class="search-title">Поиск гостиницы в седоне</h3>
-		 	<!-- <div class="map"></div> --><!-- Карту отсюда убираем -->
-			<!-- Форма поиска -->
-		</section>
+  		    <section class="interest">
+  		 		<h2>Заинтересовались?</h2>
+  		 		<p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
+  		    <section class="search">
+  		 	<h3 class="search-title">Поиск гостиницы в седоне</h3>
+          <!-- Должна быть форма поиска -->
+    		</section>
 	  </main>
-  </div><!-- Закрыли центровщик -->
-
-      <div class="map"></div><!-- Идет блок с картой -->
-
-  <div class="container"> 
-      <footer class="main-footer"><!-- Добавляем класс .container -->
+  </div>
+  <div class="map"></div>
+  
+      <footer class="main-footer container"><!-- Можем этому блоку добавить класс container -->
             <p class="#">#visitsedona</p>
-  		<!-- Лишний блок. Этот класс повесь на тег <ul> -->
-  			<ul class="footer-social">
-  				<li><a class="social-button" href="#">Твиттер</a></li>
-  				<li><a class="social-button" href="#">Фейсбук</a></li>
-  				<li><a class="social-button" href="#">Ютуб</a></li>
-  			</ul>
-  	<!-- Остаточный закрывающий тег - лишний -->
-  		    <p class="footer-copyrite">Website by
-  		    <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="logo-htmlacademy.svg" width="" height="" alt="логотип htmlacademy"></a>
-  		    </p>
-      </footer>
-  </div><!-- лишнее -->
-  <!--Увеличивающаяся карта-->
-</body>
+			<ul class="footer-social">
+				<li><a class="social-button" href="#">Твиттер</a></li>
+				<li><a class="social-button" href="#">Фейсбук</a></li>
+				<li><a class="social-button" href="#">Ютуб</a></li>
+			</ul>
+	        <p class="footer-copyrite">Website by
+	        <a href="https://htmlacademy.ru/intensive/htmlcss">
+            <img src="logo-htmlacademy.svg" width="" height="" alt="логотип htmlacademy">
+            </a>
+	        </p>
+       </footer>
+  </body>
 </html>
