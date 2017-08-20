@@ -1,0 +1,24 @@
+.interest h2 {
+  font-size: 30px;
+  font-family: "PTSans";
+  color: #000000;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 14px;
+  font-family: "PTSans";
+  color: #333333;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+.features-item-blue h3 {
+  font-size: 21px;
+  font-family: "PTSans";
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 1;
+}
+
