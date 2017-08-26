@@ -4,14 +4,16 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/style.css">
   <title>Седона</title>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
 </head>
 <body>
   <div class="container">
 	  <header class="main-header">
-	    <a class="main-header-logo">
-        <img src="img/logo-1.png" width="" height="" alt="Логотип сайта Седона">
-        </a>
 	    <nav class="main-navigation">
+	      <a class="main-header-logo">
+          <img src="img/logo-1.png" width="" height="" alt="Логотип сайта Седона">
+          </a>
 	      <ul class="site-navigation">
 	        <li><a href="info.html">Информация</a></li>
 	        <li><a href="photo-video.html">Фото и видео</a></li>
@@ -31,7 +33,7 @@
 
         <section class="promo">
            <h2 class="visually-hidden">Описание Седоны</h2><!-- Тут надо написать заголовок этой секции -->
-           <p class="promo-description-title">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+           <p class="promo-description-title">Седона - небольшой городок в Аризоне,<br>заслуживающий большего!</p>
            <p class="promo-description-reasons">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
         </section>
 
@@ -49,6 +51,7 @@
 				</div>
 		    </section>
 
+		  <div class="features-item-titles">
 	        <section class="features-item features-item-house">
 	            <h3 class="features-item-title">Жилье</h3>
 	            <p class="features-item-descr">Рекомендуем пожить в настоящем мотеле, как в кино!</p>
@@ -63,6 +66,7 @@
 	            <h3 class="features-item-title">Сувениры</h3>
 	            <p class="features-item-descr">Не только китайского, но и местного производства!</p>
 	        </section>
+	      </div>
 
 	        <section class="features-item features-item-blue">
 		        <div class="features-item-photo">
@@ -99,7 +103,7 @@
   		 	<p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
   		</section> 
   		<section class="search">
-  		 	<h3 class="search-title">Поиск гостиницы в седоне</h3>
+  		 	<button class="button-search" type="button">Поиск гостиницы в Седоне</button>
   		 	<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
   		 		<p class="date">  
   		 			<label for="in">Дата заезда:</label> 
@@ -133,13 +137,13 @@
   </div>
   
       <footer class="main-footer container"><!-- Можем этому блоку добавить класс container -->
-            <p class="#">#visitsedona</p>
+            <p class="visitsedona">#visitsedona</p>
 			<ul class="footer-social">
 				<li><a class="social-button" href="#">Твиттер</a></li>
 				<li><a class="social-button" href="#">Фейсбук</a></li>
 				<li><a class="social-button" href="#">Ютуб</a></li>
 			</ul>
-	        <p class="footer-copyrite">Website by
+	        <p class="footer-copyright">Website by
 	        	<a href="https://htmlacademy.ru/intensive/htmlcss">
             	<img src="logo-htmlacademy.svg" width="" height="" alt="логотип htmlacademy">
             	</a>
