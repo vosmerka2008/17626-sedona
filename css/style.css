@@ -20,7 +20,7 @@ a {
   background-color: #ffffff;
 }
 
-.main-navigation {
+.main-navigation {r
   font-size: 14px;
   line-height: 26px;
   color: #000000;
@@ -43,8 +43,11 @@ a {
 }
 
 .site-navigation a:active {
-  color: color: #000000;
-  color: rgba(0, 0, 0, 0.302);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.photo-about {
+	background-image: url("../img/background-img.jpg");
 }
 
 .promo {
@@ -207,7 +210,7 @@ label {
 
 .filters {
   background-color: #b3d0e4;
-  background-image: url("C:/Users/User/Desktop/test/17626-sedona/img/filter-background.jpg");
+  background-image: url("../img/filter-background.jpg");
   background-repeat: no-repeat;
 }
 
@@ -240,8 +243,7 @@ label {
 
 .sort-item {
             border-bottom: 1px dotted #81b3d2;
-            color: #000;
-            color: rgba(0,0,0, 0.302);
+            color: rgba(0,0,0, 0.3);
         }
 
 .price {
@@ -273,8 +275,7 @@ label {
 }
 
 .hotel-name a:active {
-  color: #000000;
-  color: rgba(0, 0, 0, 0.302);
+  color: rgba(0, 0, 0, 0.3);
 }
 
 
@@ -371,30 +372,5 @@ background-color: #669ec0;
 
 
 
-/*
-.interest h2 {
-  font-size: 30px;
-  font-family: "PTSans", sans-serif;
-  color: #000000;
-  font-weight: bold;
-  line-height: 36px;
-}
-
-p {
-  font-size: 14px;
-  font-family: "PTSans", sans-serif;
-  color: #333333;
-  font-weight: normal;
-  line-height: 21px;
-}
-
-.features-item-blue h3 {
-  font-size: 21px;
-  font-family: "PTSans", sans-serif;
-  color: #ffffff;
-  font-weight: bold;
-  line-height: 26px;
-}
-*/
 
 
