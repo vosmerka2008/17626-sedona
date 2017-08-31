@@ -6,17 +6,18 @@
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-</head>
+ 
 <body>
   <div class="container">
 	  <header class="main-header">
 	    <nav class="main-navigation">
-	      <a class="main-header-logo">
-          <img src="img/logo-1.png" width="" height="" alt="Логотип сайта Седона">
-          </a>
+	      
 	      <ul class="site-navigation">
 	        <li><a href="info.html">Информация</a></li>
 	        <li><a href="photo-video.html">Фото и видео</a></li>
+	        <li><a class="main-header-logo">
+            <img src="img/logo-1.png" width="140" height="70" alt="Логотип сайта Седона">
+            </a></li>
 	        <li><a href="map.html">Карта штата</a></li>
 	        <li><a href="catalog.html">Гостиницы</a></li>
 	      </ul>
@@ -38,7 +39,7 @@
         </section>
 
 	    <section class="features">
-		    <h2 class="visually-hiddon">Наши преимущества</h2>
+		    <h2 class="visually-hidden">Наши преимущества</h2>
 
 			<section class="features-item features-item-blue">
 	            <div class="features-item-info">
@@ -47,22 +48,22 @@
 	        	    <p class="features-item-descr">Седона - не аттракцион для туристов, там течет своя жизнь</p>
 	      	    </div>
 			    <div class="features-item-photo">
-	                <img src="img/town-img.jpg" width="" height="" alt="Фото Седоны">
+	                <img src="img/town-img.jpg" width="800" height="255" alt="Фото Седоны">
 				</div>
 		    </section>
 
 		  <div class="features-item-titles">
-	        <section class="features-item features-item-house">
+	        <section class="features-items features-item-house">
 	            <h3 class="features-item-title">Жилье</h3>
 	            <p class="features-item-descr">Рекомендуем пожить в настоящем мотеле, как в кино!</p>
 	        </section>
 
-	        <section class="features-item features-item-food">
+	        <section class="features-items features-item-food">
 	            <h3 class="features-item-title">Еда</h3>
 	            <p class="features-item-descr">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
 	        </section>
 
-	        <section class="features-item features-item-souvenir">
+	        <section class="features-items features-item-souvenir">
 	            <h3 class="features-item-title">Сувениры</h3>
 	            <p class="features-item-descr">Не только китайского, но и местного производства!</p>
 	        </section>
@@ -70,7 +71,7 @@
 
 	        <section class="features-item features-item-blue">
 		        <div class="features-item-photo">
-	            <img src="img/bridge-img.jpg" width="" height="" alt="Мост дьявола">
+	            <img src="img/bridge-img.jpg" width="800" height="255" alt="Мост дьявола">
 	            </div>
 		        <div class="features-item-info">
 	  	        <h3 class="features-item-title">Там есть мост дьявола</h3>
@@ -79,6 +80,7 @@
 		        </div>
 		    </section>
 
+		   <div class="item-gray">
 		    <section class="features-item features-item-gray"><!-- Пока оставляем только общий класс features-item -->
 		        <h3 class="features-item-title">Небольшая площадь</h3>
 		        <span class="fityres-item-number">№3</span>
@@ -96,6 +98,7 @@
 		        <span class="features-item-number">№5</span>
 		        <p class="features-item-descr">Большинство едет в Гранд-Каньон и толпится там</p>
 			</section>
+		   </div>	
 		</section>
 
   		<section class="interest">
@@ -136,7 +139,8 @@
   	</p>
   </div>
   
-      <footer class="main-footer container"><!-- Можем этому блоку добавить класс container -->
+      <footer class="main-footer"><!-- Можем этому блоку добавить класс container -->
+      	 <div class="footer-container">
             <p class="visitsedona">#visitsedona</p>
 			<ul class="footer-social">
 				<li><a class="social-button" href="#">Твиттер</a></li>
@@ -148,6 +152,7 @@
             	<img src="logo-htmlacademy.svg" width="" height="" alt="логотип htmlacademy">
             	</a>
 	        </p>
+	       </div> 
        </footer>
   </body>
 </html>
