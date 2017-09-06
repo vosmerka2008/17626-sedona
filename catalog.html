@@ -32,8 +32,12 @@
   					<legend>Инфраструктура:</legend>
   					<ul class="infrastr"><!-- Этот класс может быть как у следующего fieldset -->
   						<li class="filter-option">
-                        <input class="filter-input filter-input-checkbox" type="checkbox" id="infrastr-1" checked>
-                        <label for="infrastr-1">Бассейн</label>
+                        <label class="filter-checkbox" for="infrastr-1">
+                          <input class="visually-hidden" type="checkbox" id="infrastr-1" name="bath" checked><span class="checkbox-indicator"><img src="img/checkbox-on.svg"></span>Бассейн
+
+                         </label>
+                        
+                        
              	        </li>
   						<li class="filter-option">
                         <input class="filter-input filter-input-checkbox" type="checkbox" id="infrastr-2" name="parking">

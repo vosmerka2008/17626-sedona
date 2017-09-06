@@ -542,10 +542,13 @@ body {
 }
 
 
-
+.features-item-titles img {
+	margin-bottom: 30px;
+}
 
 .features-item-titles {
 	display: flex;
+
 }
 
 
@@ -763,7 +766,21 @@ label {
 
 
 
+.filter-checkbox {
+	display: flex;
+	align-items: center;
+}
 
+.filter-checkbox img {
+	display: block;
+	margin-right: 13px;
+}
+
+.filter-checkbox input[type="checkbox"] + .checkbox-indicator:focus {
+	border-color: #663d15;
+	outline: thin dotted;
+	outline: 5px auto -webkit-focus-ring-color;
+}
 
 .filter fieldset {
   border: none;
