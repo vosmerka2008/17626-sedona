@@ -107,9 +107,10 @@
   		 	<p>Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
   		 	<button class="button-search" type="button">Поиск гостиницы в Седоне</button>
   		</section> 
-  		<section class="search">
+  		<section class="modal modal-search">
   		 	
   		 	<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+  		 	<div class="dates">
   		 		<p class="date">  
   		 			<label for="in">Дата заезда:</label> 
   		 			<input id="in" type="text" name="date-in" placeholder="24 апреля 2017"> 
@@ -118,16 +119,19 @@
   		 			<label for="off">Дата выезда:</label> 
   		 			<input id="off" type="text" name="date-off" placeholder="4 июля 2017"> 
   		 		</p>
+  		 	</div>
+  		 	<div class="old-child">	
   		 		<p class="visitors"> 
-  		 			<label for="old">Взрослые:</label> 
+  		 			<label class="olds" for="old">Взрослые:</label> 
 					<input type="button" name="old-minus" value="-"> 
                     <input type="text" id="old" value="2">
                     <input type="button" value="+" name="old-plus"> 
-                    <label for="child">Дети:</label>
+                    <label class="childs" for="child">Дети:</label>
 					<input type="button" name="child-minus" value="-">
                     <input type="text" id="child" value="0"> 
                     <input type="button" value="+" name="child-plus">
                 </p>
+              </div>
   		 		<button class="button" type="submit">Найти</button>
 			</form>
           <!-- Должна быть форма поиска -->
