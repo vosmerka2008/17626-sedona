@@ -846,6 +846,11 @@ label {
 	outline: 5px auto -webkit-focus-ring-color;
 }
 
+
+
+
+
+
 .filter fieldset {
   border: none;
   margin: 0;
@@ -876,15 +881,6 @@ label {
 	margin-right: 115px;
 }
 
-
-
-.filter .price-range-wrap {
-	margin-left: auto;
-	margin-right: 0;
-	padding-right: 0;
-	width: 318px;
-}
-
 .filter-fieldset legend {
 	padding: 0;
 	margin-bottom: 25px;
@@ -896,6 +892,134 @@ label {
 
 .filter-fieldset li:last-child {
 	margin: 0;
+}
+
+.filter .price-range-wrap {
+	margin-left: auto;
+	margin-right: 0;
+	padding-right: 0;
+	width: 318px;
+}
+
+.price-range-wrap legend {
+	margin-bottom: 12px;
+}
+
+.price {
+	position: relative;
+
+	height: 36px;
+	margin-bottom: 20px;
+	border: 2px solid #ffffff;
+	border-radius: 2px;
+}
+
+.price::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 2px;
+	height: 22px;
+	background: #ffffff;
+	transform: translate(-50%, -50%);
+}
+
+.price-range-wrap label {
+	display: inline-block;
+
+	cursor: pointer;
+
+}
+
+.price .min-price,
+.price .max-price {
+	padding-top: 6px;
+	width: 90px;
+}	
+
+.price .min-price {
+	padding-left: 65px;
+}
+
+
+.price .max-price {
+	padding-left: 50px;
+}
+
+
+
+.price input {
+	width: 50px;
+	margin: 0;
+	background: inherit;
+	font: inherit;
+	color: #ffffff;
+	border: none;
+
+}
+
+.range {
+	position: relative;
+	margin-bottom: 32px;
+}
+
+.range .scale {
+	height: 2px;
+	background:  rgba(255, 255, 255, 0.3);
+}
+
+.range .bar {
+	width: 80%;
+	height: 2px;
+	background: #ffffff;
+	margin-top: -2px;
+}
+
+.range-toggl {
+	position: absolute;
+	top: -9px;
+
+	width: 4px;
+	height: 4px;
+	background: #ababab;
+	border: 8px solid #ffffff;
+	border-radius: 50%;
+	box-shadow:  0 2px 1px 0 rgba(0, 1, 1, 0.2);
+	cursor: pointer;
+}
+
+.range-toggl-min {
+	left: 0;
+}
+
+.range-toggl-min {
+	left: 80%;
+}
+
+.button-filter {
+	display: block;
+	margin: auto;
+	padding: 6px 35px;
+
+	font-size: 14px;
+	line-height: 20px;
+	color: #ffffff;
+	text-transform: uppercase;
+
+	background: transparent;
+	border: 2px solid #ffffff;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.button-filter:hover {
+	color: #000000;
+	background: #ffffff;
+}
+
+.range-toggl:hover {
+	background: #1c4f80;
 }
 
 .sort {
@@ -1007,6 +1131,8 @@ label {
 	justify-content: space-between;
 }
 
+
+
 .hotel-rating {
 margin: 0;	
 padding: 3px 14px;
@@ -1099,15 +1225,4 @@ color: #666666;
 	display: block;
 }
 
-.hotel-star  {
-	margin: 0;
-	display: flex;
-	justify-content: flex-end;
-	
-}
 
-.hotel-star svg {
-	margin-left: 5px;
-}
-
-.form
