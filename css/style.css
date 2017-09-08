@@ -71,8 +71,6 @@ a {
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
-  padding-top: 60px; 
-  padding-bottom: 38px;
 }
 
 .promo .promo-description-reasons {
@@ -80,21 +78,17 @@ a {
 }
 
 .features-item-descr {
-	color: #333333;
+	color: inherit;
 }
 
-.features-item-blue .features-item-descr {
-	color: #ffffff;
-}
+.
 
 .features-item-blue {
   color: #ffffff;
   background-color:  #81b3d2;
 }
 
-.features-item-info{
-  text-align: center;	
-}
+
 
 .features-item-title {
   font-size: 21px;
@@ -186,10 +180,7 @@ a {
 
 
 
-.features-item-titles {
-  background-color: #ffffff;
-  text-align: center;
-}
+
 
 .features-item-gray{
   
@@ -210,6 +201,8 @@ h2 {
 
 .button-search {
   font: inherit;
+  display: inline-block;
+  min-width: 568px;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
@@ -265,7 +258,7 @@ h2 {
 }
 
 
-.living,
+
 .infrastr,
 .sort-list,
 .sort-up-down{
@@ -308,7 +301,7 @@ h2 {
 }
 
 
-.price {
+.prices {
   color: #81b3d2;
   border-bottom: 0px;
 }
@@ -399,7 +392,19 @@ background-color: #669ec0;
   color: #666666;
 }
 
+.hotel-star {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
 
+.hotel-star img {
+  margin-right: 6px;
+}
+
+.hotel-star img:last-child {
+  margin-right: 0;
+}
 
 
 
@@ -508,12 +513,13 @@ body {
 
 .promo {
 padding: 57px 0;
+max-width: 500px;
+margin: 0 auto;
 }
 
 .promo-description-title {
 	margin: 0;
 	margin-bottom: 30px;
-	padding: 0;
 }
 
 .promo-description-reasons{
@@ -525,13 +531,14 @@ padding: 57px 0;
 
 
 
-.features-item-blue {
-	display: flex;
-	margin: 0;
+.features-item { 
+  display: flex;
+  text-align: center;
+  color: #333333;
 }
 
 .features-item-info {
-  text-align: center;
+  
   display: flex;
   padding: 47px 50px;
   flex-direction: column;
@@ -543,7 +550,7 @@ padding: 57px 0;
 }
 
  .item-gray {
- 	display: flex;
+ 
  	background: #f2f2f2;
  }
 
@@ -574,12 +581,6 @@ padding: 57px 0;
 	margin-bottom: 30px;
 }
 
-.features-item-titles {
-	display: flex;
-
-}
-
-
 .features-items {
 	width: 400px;
 	padding: 60px 50px;
@@ -588,8 +589,10 @@ padding: 57px 0;
 
  
 
-.interest p {
+.dates {
+  margin: 0;
 	color: #333333;
+  margin-bottom: 48px;
 }
 
 .interest {
@@ -599,6 +602,7 @@ padding: 57px 0;
 
  .interest {
  	padding-top: 51px; 
+ 	position: relative;
  }
 
  .interest h2 {
@@ -606,13 +610,17 @@ padding: 57px 0;
  	margin-bottom: 27px;
  }
 
- .interest p {
+ .interest {
  	margin: 0;
+ 	
+ }
+
+ .dates {
  	margin-bottom: 48px;
  }
 
  .button-search {
- 	padding: 33px 140px;
+ 	padding: 33px 30px;
  }
 
  
@@ -636,24 +644,21 @@ label {
  .modal {
  	background-color: #ffffff;
  	color: #000000;
-
- }
-
- .modal-search {
+ 	position: absolute;
+ 	z-index: 10;
  	color: #000000;
  	width: 460px;
  	padding: 57px 55px;
- 	top: 45px;
+ 	top: 100%;
  	left: 50%;
- 	margin-left: 315px;
- 	
- }
+ 	margin-left: -285px;
+}
 
- .dates input::-webkit-input-placeholder {
+ .search-form input::-webkit-input-placeholder {
  	color: #000; 
  }
 
-.dates p {
+.search-form p {
  	margin: 0;
  	margin-bottom: 30px;
  }
@@ -678,17 +683,45 @@ label {
  }
 
  .date {
+ 	position: relative;
  	display: flex;
  	justify-content: space-between;
  	align-items: center;
  	flex-wrap: wrap;
  }
 
+ .search-calendar {
+ 	border: 0;
+ 	padding: 0;
+ 	background: none;
+ 	position: absolute;
+ 	width: 21px;
+ 	height: 22px;
+ 	top: 50%;
+ 	margin-top: -11px;
+ 	right: 9px;
+ }
+
+ .search-calendar svg {
+ 	display: block;
+ 	width: 100%;
+ 	height: 100%;
+ 	fill: #a9a9a9;
+ }
+
+ .search-calendar:hover svg {
+ 	fill: #000000;
+ }
+
+ .search-calendar:focus svg {
+ 	fill: #81b3d2;
+ }
+
  .date label{
  	width: 100px;
  }
 
-.dates input[type="text"] {
+.search-form input[type="text"] {
  	font: inherit;
  	line-height: 26px;
  	font-weight: 700;
@@ -702,23 +735,7 @@ label {
  	padding-right: 40px;
  }
 
- .date svg {
- 	display: block;
- 	position: absolute;
- 	left: 875px;
-}
 
-.date path {
-	fill: #cacaca;
-}
-
-.date path:hover {
-	fill: #000000;
-} 
-
-.date path:active {
-	fill: #81b3d2;
-} 
 
  .old-child input[type="text"] {
  	font: inherit;
@@ -775,15 +792,21 @@ label {
  	justify-content: space-between;
  	align-items: center;
  	margin: 0;
- 	margin-bottom: 55px;
+ 
+ }
+
+ .old-child p {
+    margin-bottom: 55px;
  }
 
  .olds label {
  	margin-right: 41px;
+ 	width: 100px;
  }
 
  .childs label {
  	margin-right: 28px;
+ 	width: 100px;
  }
 
 
@@ -829,27 +852,41 @@ label {
 }
 
 
+.svg-checked {
+	display: none;
+	fill: #ffffff;
+}
+
+.svg-not-checked {
+	display: block;
+	fill: #ffffff;
+}
+
+input[type="checkbox"] [disabled] {
+	fill: #6a6a6a;
+}
 
 .filter-checkbox {
 	display: flex;
 	align-items: center;
 }
 
-.filter-checkbox img {
-	display: block;
-	margin-right: 13px;
+.checkbox-indicator {
+	height: 23px;
+	width: 40px;
 }
 
-.filter-checkbox input[type="checkbox"] + .checkbox-indicator:focus {
-	border-color: #663d15;
-	outline: thin dotted;
-	outline: 5px auto -webkit-focus-ring-color;
+.filter-checkbox input:checked ~ .checkbox-indicator .svg-checked {
+  display: block;
 }
 
+.filter-checkbox input:checked ~ .checkbox-indicator .svg-not-checked {
+  display: none;
+}
 
-
-
-
+.filter-checkbox input:disabled ~ .checkbox-indicator svg {
+  fill: #6a6a6a;
+}
 
 .filter fieldset {
   border: none;
@@ -871,8 +908,7 @@ label {
 
 
 
-.infrastr,
-.living {
+.infrastr {
 	margin: 0;
 	padding: 0;
 }
@@ -893,6 +929,8 @@ label {
 .filter-fieldset li:last-child {
 	margin: 0;
 }
+
+
 
 .filter .price-range-wrap {
 	margin-left: auto;
@@ -1031,7 +1069,7 @@ label {
 
  .sort-find {
   margin: 0;
-  width: 182px;
+  width: 165px;
  
 }
 
@@ -1046,7 +1084,8 @@ label {
 
 
 .sorts {
-	margin-right: 40px;
+	
+	width: 115px;
 }
 
 .sort-list li {
@@ -1210,13 +1249,13 @@ color: #666666;
 }
 
 
-.footer-copyright a:hover path,
-.footer-copyright a:focus path {
+.footer-copyright a:hover svg,
+.footer-copyright a:focus svg {
 	fill:  #81b3d2;
 }
 
 
-.footer-copyright a:active path {
+.footer-copyright a:active svg {
 	fill: rgba(0,0,0, 0.3);
 
 }
