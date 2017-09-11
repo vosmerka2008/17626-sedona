@@ -733,9 +733,16 @@ label {
   box-shadow: 0 7px 15px 0 rgba(0,0,0,.15);
 }
 
- .search-form input::-webkit-input-placeholder {
- 	color: #000; 
- }
+::-webkit-input-placeholder {
+    color:#000000;
+}
+::-moz-placeholder {
+    color:#c000000;
+}
+
+:-ms-input-placeholder {
+    color:#c000000;
+}
 
 
 
@@ -1340,3 +1347,8 @@ color: #666666;
 	display: block;
 }
 
+ :-ms-input-placeholder {
+   color: #000000;
+ }
+
+ 
