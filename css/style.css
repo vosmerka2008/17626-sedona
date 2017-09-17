@@ -732,8 +732,6 @@ input:-ms-input-placeholder {
   height: 38px;
 }
 
-
-
 .old-child input[type="text"] {
   font-family: inherit;
   line-height: 26px;
