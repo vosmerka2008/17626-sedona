@@ -5,7 +5,7 @@ body {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  color: #000000;
+  color: #ffffff;
   text-transform: uppercase;
 }
 
@@ -732,8 +732,10 @@ input:-ms-input-placeholder {
   height: 38px;
 }
 
+
+
 .old-child input[type="text"] {
-  font: inherit;
+  font-family: inherit;
   line-height: 26px;
   font-weight: 700;
   text-transform: uppercase;
@@ -745,7 +747,7 @@ input:-ms-input-placeholder {
   text-align: center;
 }
 
-.old-child input[type="button"] {
+.old-cihld input[type="button"] {
   box-sizing: border-box;
   width: 38px;
   height: 38px;
@@ -837,7 +839,7 @@ input:-ms-input-placeholder {
   position: absolute;
   left: auto;
   right: auto;
-  z-index:a 2;
+  z-index: 2;
   border: none;
 }
 
